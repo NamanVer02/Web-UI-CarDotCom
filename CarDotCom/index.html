@@ -30,14 +30,39 @@
             <h1>Dream. Fast.</h1>
             <p>Discover the fastest family cars on planet earth.</p>
         </section>
+
+        <button class="chatbot-btn" id="chatbot-btn" onclick="toggleCalculator()">&#x1F4C8;</button>
+        <button class="calc-close-btn" id="calc-close-btn" onclick="toggleCalculator()">&#10060;</button>
+        <div class="calculator" id="calculator">
+            <input type="text" id="display" readonly>
+            <div class="buttons">
+                <button onclick="appendCharacter('9')">9</button>
+                <button onclick="appendCharacter('8')">8</button>
+                <button onclick="appendCharacter('7')">7</button>
+                <button onclick="appendCharacter('/')">/</button>
+                <button onclick="appendCharacter('*')">*</button>
+                <button onclick="appendCharacter('6')">6</button>
+                <button onclick="appendCharacter('5')">5</button>
+                <button onclick="appendCharacter('4')">4</button>
+                <button onclick="appendCharacter('-')">-</button>
+                <button onclick="appendCharacter('+')">+</button>
+                <button onclick="appendCharacter('3')">3</button>
+                <button onclick="appendCharacter('2')">2</button>
+                <button onclick="appendCharacter('1')">1</button>
+                <button onclick="appendCharacter('0')">0</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculateResult()" class="equals">=</button>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <button class="footer-button-outline">Contact Us</button>
-            <button class="footer-button-filled">Book a Test Drive</button>
+            <button class="button-outline" onclick="location.href='contact.html'">Contact Us</button>
+            <button class="button-filled">Book a Test Drive</button>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
