@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CarDotCom</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="./data/sedan.png" class="logo"></img>
+                <h1 class="logo-text">CarDotCom</h1>
+            </div>
+            <div class="hamburger">☰</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="temp">
+            <h2 class="form-heading"> Get in touch with us. </h2>
+            <div class="form-container">
+                <form id="contactForm">
+
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+
+                    <div class="row">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" onchange="handleAge()">
+                        
+                        <label for="age">Age:</label>
+                        <input type="text" id="age" name="age" disabled>
+                    </div>
+
+
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Phone number should be 10 digits" required>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="button-filled">Submit</button>
+                        <button class="button-outline" onclick="location.href='index.html'">Go Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="error-messages" class="error-messages"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
